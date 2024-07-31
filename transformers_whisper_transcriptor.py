@@ -19,7 +19,7 @@ class Transcriber:
 
     def get_transcription_info(self, audio_path, timestamp):
         start_time = time.time()
-        result = self.transcription_pipeline(audio_path, return_timestamps='word')
+        result = self.transcription_pipeline(audio_path, return_timestamps='word', language='es')
         inference_time = time.time() - start_time
         transcription = result['text']
         words_with_timestamps = []

@@ -11,7 +11,7 @@ class Transcriber:
 
     def get_transcription_info(self, audio_path, timestamp):
         start_time = time.time()
-        segments, info = self.model.transcribe(audio_path, word_timestamps=True)
+        segments, info = self.model.transcribe(audio_path, word_timestamps=True, language="es")
         inference_time = time.time() - start_time
         transcription = ''
         words_with_timestamps = []
